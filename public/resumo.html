@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo de Vendas</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand">Controle de Vendas</div>
+    <nav>
+      <a href="/cadastro.html">Cadastro</a>
+      <a class="active" href="/resumo.html">Resumo</a>
+      <a href="/">Venda rápida</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="page-title">
+    <h1>Resumo</h1>
+    <p>Totais arrecadados, vendidos e o estoque disponível.</p>
+  </div>
+  <div id="notice" class="notice"></div>
+
+  <div class="grid grid-summary">
+    <div class="card metric"><div class="label">Arrecadado</div><div id="revenue" class="value">R$ 0,00</div></div>
+    <div class="card metric"><div class="label">Unidades vendidas</div><div id="unitsSold" class="value">0</div></div>
+    <div class="card metric"><div class="label">Unidades em estoque</div><div id="unitsStock" class="value">0</div></div>
+    <div class="card metric"><div class="label">Número de vendas</div><div id="salesCount" class="value">0</div></div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:18px">
+    <section class="card">
+      <h2>Estoque por produto</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Produto</th><th>Disponível</th><th>Vendidos</th><th>Arrecadado</th></tr></thead>
+          <tbody id="productSummary"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Últimas vendas</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Venda</th><th>Data</th><th>Itens</th><th>Total</th></tr></thead>
+          <tbody id="recentSales"></tbody>
+        </table>
+      </div>
+      <p style="color:#687384;font-size:.85rem;margin-bottom:0">Valor atual do estoque: <strong id="stockValue">R$ 0,00</strong></p>
+    </section>
+  </div>
+</main>
+<footer>Controle de Vendas</footer>
+
+<div id="saleModal" class="modal-backdrop">
+  <div class="modal">
+    <h3 id="modalTitle">Venda</h3>
+    <div id="modalContent"></div>
+    <div style="margin-top:18px;text-align:right"><button id="closeModal" class="btn-secondary">Fechar</button></div>
+  </div>
+</div>
+
+<script src="/common.js"></script>
+<script src="/resumo.js"></script>
+</body>
+</html>

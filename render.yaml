@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: controle-vendas-simples
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false

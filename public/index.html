@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venda Rápida</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand">Controle de Vendas</div>
+    <nav>
+      <a href="/cadastro.html">Cadastro</a>
+      <a href="/resumo.html">Resumo</a>
+      <a class="active" href="/">Venda rápida</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="page-title">
+    <h1>Venda rápida</h1>
+    <p>Clique nos produtos conforme o cliente pedir. Depois finalize a venda.</p>
+  </div>
+  <div id="notice" class="notice"></div>
+
+  <div class="grid sale-layout">
+    <section class="card">
+      <h2>Produtos</h2>
+      <input id="search" class="search" type="search" placeholder="Buscar produto...">
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <aside class="card cart-card">
+      <h2>Pedido atual</h2>
+      <div id="cart"></div>
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">R$ 0,00</span>
+      </div>
+      <div class="cart-footer">
+        <button id="finishBtn" class="btn-success btn-large" disabled>FINALIZAR VENDA</button>
+        <button id="clearBtn" class="btn-secondary">Limpar pedido</button>
+      </div>
+    </aside>
+  </div>
+</main>
+<footer>Controle de Vendas</footer>
+<script src="/common.js"></script>
+<script src="/venda.js"></script>
+</body>
+</html>
